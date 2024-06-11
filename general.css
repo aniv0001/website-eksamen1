@@ -1,0 +1,361 @@
+* {
+  box-sizing: border-box;
+}
+img {
+  width: 100%;
+  height: auto;
+  display: block;
+  padding-bottom: 3rem;
+  padding-top: 0.2rem;
+}
+
+body {
+  background-color: #f6ebd7;
+}
+
+/********** MENU *********/
+body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+}
+.logo img {
+  width: 150px;
+  /* height: 50px; */
+}
+
+header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px;
+  background-color: #f6ebd7;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+nav {
+  display: flex;
+  align-items: center;
+}
+
+.menu {
+  display: flex;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.menu li {
+  margin-right: 20px;
+  position: relative; /* For at den faller ned */
+}
+
+.menu li:last-child {
+  margin-right: 0;
+}
+
+.menu a {
+  display: block;
+  padding: 10px;
+  color: rgb(1, 1, 208);
+  text-decoration: none;
+  transition: color 0.3s;
+  text-align: end;
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 1.5rem;
+  font-weight: 400;
+}
+
+.menu a:hover {
+  color: rgb(0, 0, 0);
+}
+
+.dropdown-content {
+  display: none;
+  position: absolute;
+  background-color: #f6ebd7;
+  min-width: 150px;
+  box-shadow: 0 0 10px rgba(248, 248, 248, 0.1);
+  z-index: 1;
+  list-style-type: none;
+}
+
+.dropdown-content li {
+  margin: 0;
+}
+
+.dropdown-content a {
+  padding: 10px;
+  color: rgb(1, 1, 208);
+  text-align: right;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+.dropdown-content a:hover {
+  color: rgb(0, 0, 0);
+}
+
+.dropdown:hover .dropdown-content {
+  display: block;
+}
+
+.burger {
+  width: 30px;
+  height: 20px;
+  cursor: pointer;
+}
+
+.burger .line {
+  width: 100%;
+  height: 2px;
+  background-color: rgb(1, 1, 208);
+  margin-bottom: 5px;
+  transition: 0.2s linear;
+}
+
+.burger {
+  display: none;
+}
+
+@media screen and (max-width: 800px) {
+  .menu {
+    display: none;
+    position: relative; /* For dropdown */
+  }
+  .menu a {
+    display: block;
+    padding: 10px;
+    color: rgb(1, 1, 208);
+    text-decoration: none;
+    transition: color 0.3s;
+    text-align: end;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 1.5rem;
+    font-weight: 400;
+  }
+  .burger {
+    display: block;
+  }
+  .burger.active .line:nth-child(1) {
+    transform: rotate(45deg) translate(5px, 5px);
+    transition: 0.2s linear;
+  }
+
+  .burger.active .line:nth-child(2) {
+    opacity: 0;
+    transition: 0.15s linear;
+  }
+
+  .burger.active .line:nth-child(3) {
+    transform: rotate(-45deg) translate(5px, -5px);
+    transition: 0.2s linear;
+  }
+
+  nav.active .menu {
+    display: block;
+    background-color: #f6ebd7;
+    position: absolute;
+    top: 60px;
+    left: 0;
+    width: 100%;
+    z-index: 1;
+  }
+
+  nav.active .menu li {
+    margin: 10px 20px;
+  }
+
+  nav.active .menu a {
+    font-size: 24px;
+  }
+
+  .dropdown-content {
+    position: static;
+    box-shadow: none;
+    list-style-type: none;
+  }
+  .dropdown-content a:hover {
+    color: rgb(0, 0, 0);
+  }
+}
+/********** MENU SLUTT **********/
+
+/********** FOOTER **********/
+
+footer {
+  background-color: rgb(1, 1, 208);
+  gap: 150px;
+  padding: 20px;
+}
+
+@media (min-width: 750px) {
+  footer {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+  }
+}
+
+.foot1 {
+  padding-bottom: 40px;
+  padding: 20px;
+}
+
+.grid_1-1 {
+  grid-template-columns: 1fr 1fr;
+  display: grid;
+  gap: 10px;
+}
+
+.footerh {
+  font-family: Arial, Helvetica, sans-serif;
+  color: #f6ebd7;
+  font-size: 4rem;
+  font-weight: 400;
+}
+
+.joinbutton {
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 1rem;
+  color: rgb(1, 1, 208);
+  background-color: #f6ebd7;
+  border-radius: 50px;
+  padding: 15px 32px;
+  text-decoration: none;
+}
+
+.footlinks {
+  font-family: Arial, Helvetica, sans-serif;
+  color: #f6ebd7;
+  text-decoration: none;
+  font-size: 1.3rem;
+}
+
+.foottext {
+  font-family: Arial, Helvetica, sans-serif;
+  font-weight: 800;
+  font-size: 1.2rem;
+  color: #f6ebd7;
+}
+
+/********** FOOTER SLUT **********/
+
+.padding {
+  padding: 20px;
+}
+
+p {
+  font-size: 1.2rem;
+  padding-bottom: 2rem;
+  font-family: "Times New Roman", Times, serif;
+  font-weight: 400;
+  color: rgb(0, 0, 125);
+  line-height: 1.4;
+}
+h4 {
+  font-family: Arial, Helvetica, sans-serif;
+  font-weight: 400;
+  font-size: 1.7rem;
+  color: rgb(1, 1, 208);
+}
+h5 {
+  font-family: Arial, Helvetica, sans-serif;
+  font-weight: 400;
+  font-size: 1.4rem;
+}
+.dato {
+  font-family: Arial, Helvetica, sans-serif;
+  font-weight: 400;
+  font-size: 1.4rem;
+  color: rgb(1, 1, 208);
+  text-align: right;
+}
+@media screen and (max-width: 800px) {
+  h1 {
+    color: rgb(1, 1, 208);
+    font-family: Arial, Helvetica, sans-serif;
+    font-weight: 400;
+    font-style: normal;
+    font-size: 2.5rem;
+    text-align: center;
+  }
+  h2 {
+    color: rgb(1, 1, 208);
+    font-family: Arial, Helvetica, sans-serif;
+    font-weight: 400;
+    font-style: normal;
+    font-size: 2.2rem;
+  }
+  h3 {
+    color: rgb(1, 1, 208);
+    font-family: Arial, Helvetica, sans-serif;
+    font-weight: 400;
+    font-style: normal;
+    font-size: 1.8rem;
+  }
+  .links_nett {
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 1rem;
+    color: #f6ebd7;
+    background-color: rgb(1, 1, 208);
+    border-radius: 50px;
+    padding: 15px 32px;
+    text-decoration: none;
+  }
+  .links_nett:hover {
+    color: rgb(0, 0, 0);
+  }
+}
+@media (min-width: 750px) {
+  h1 {
+    color: rgb(1, 1, 208);
+    font-family: Arial, Helvetica, sans-serif;
+    font-weight: 400;
+    font-style: normal;
+    font-size: 3rem;
+    padding-left: 2rem;
+  }
+  h2 {
+    color: rgb(1, 1, 208);
+    font-family: Arial, Helvetica, sans-serif;
+    font-weight: 400;
+    font-style: normal;
+    font-size: 2.5rem;
+  }
+  h3 {
+    color: rgb(1, 1, 208);
+    font-family: Arial, Helvetica, sans-serif;
+    font-weight: 400;
+    font-style: normal;
+    font-size: 1.8rem;
+  }
+
+  .links_nett {
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 1rem;
+    color: #f6ebd7;
+    background-color: rgb(1, 1, 208);
+    border-radius: 50px;
+    padding: 15px 32px;
+    text-decoration: none;
+    margin-top: 2rem;
+  }
+  .links_nett:hover {
+    color: rgb(0, 0, 0);
+  }
+  .hjemmeside_bilde {
+    width: 70%;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: 2rem;
+  }
+  .link_knapp {
+    padding-top: 2rem;
+  }
+}
+.custom-line {
+  border: none;
+  height: 3px;
+  background-color: rgb(1, 1, 208);
+  margin: 3rem 0px;
+}
